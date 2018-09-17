@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title><%=title%></title>
+    </head>
+    <body>
+        <div>
+            <h1 class="title"><%=title%></h1>
+            <p>
+                List of books
+                <ul>
+                <%
+                for (el in books) {
+                    let book = books[el];
+            %>
+                <li>
+                    <h3><%=book.title%></h3>
+                    <span><%=book.author%></span>
+                    <br/>
+                    <a href="/books/<%=book._id%>">More info</a>
+                </li>
+            <%
+                }
+
+            %>
+                </ul>
+               
+            </p>
+        </div>
+    </body>
+</html>
